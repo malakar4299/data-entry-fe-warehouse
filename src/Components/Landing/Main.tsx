@@ -5,9 +5,6 @@ import { useState } from "react";
 import axios from "axios";
 import { Button, Typography } from "@mui/material";
 const Main = () => {
-    const blobServiceClient = new BlobServiceClient(
-        "cDefaultEndpointsProtocol=https;AccountName=assg3cs519am811d;AccountKey=Y+7JrHrSaCcqlHKKiW6Ih3w5aaqm0ndy5DEZUjBri515sCQ4wF3YNpN38CVWovIsmCsRgj8XRMSi+AStWrPntQ==;EndpointSuffix=core.windows.net"
-    );
     const [file, setFile] = useState(null);
 
     const handleFileChange = (event:any) => {
@@ -32,7 +29,7 @@ const Main = () => {
           onProgress: ev => console.log(ev)
         });
         console.log(result)
-        axios.post('https://docker-assg-5-func.whitesand-2444b2f3.eastus.azurecontainerapps.io/api/HttpTrigger1?msg='+`https://assg3cs519am811d.blob.core.windows.net/warehouse-images/${file.name}`).then(res => {
+        axios.post(`https://docker-assg-5-func.whitesand-2444b2f3.eastus.azurecontainerapps.io/api/HttpTrigger1?msg=https://assg3cs519am811d.blob.core.windows.net/warehouse-images/${file.name}`).then(res => {
             console.log(res)
         })
         console.log(`Upload of file '${file.name}' completed`);
