@@ -8,12 +8,12 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 
 const theme = createTheme({
   palette: {
-  }
+    
+  },
 });
 
 
 export const App = () => (
-  <ChakraProvider theme={ChakraTheme}>
     <ThemeProvider theme={theme}>
         <Router>
           <Switch>
@@ -21,5 +21,4 @@ export const App = () => (
           </Switch>
         </Router>
     </ThemeProvider>
-  </ChakraProvider>
 )

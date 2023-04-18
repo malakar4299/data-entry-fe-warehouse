@@ -1,4 +1,4 @@
-import {Box, Grid} from "@mui/material";
+import {Container, Grid} from "@mui/material";
 import { Fragment } from "react"
 import { BlobServiceClient } from "@azure/storage-blob";
 import { useState } from "react";
@@ -41,7 +41,7 @@ const Main = () => {
 
     return ( 
         <Fragment>
-            <Box sx={{display:'flex', justifyContent:'center', alignItems:'center', flexDirection:'column', background:'#000'}}>
+            <Container maxWidth={false} sx={{display:'flex',minHeight:'100vh', justifyContent:'center', alignItems:'center', flexDirection:'column', background:'#000'}}>
                 <Typography component={'h1'} sx={{fontWeight:'400', fontSize:'52px', fontFamily:'sans-serif', color:'#fff'}}>
                     WAREHOUSE MANAGEMENT
                 </Typography>
@@ -53,7 +53,7 @@ const Main = () => {
                     </form>
                 </Grid>
                 
-            </Box>
+            </Container>
       </Fragment>
      );
 }
