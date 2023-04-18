@@ -18,7 +18,7 @@ const Main = () => {
 
     async function uploadImage(containerName:string, file:any) {
         const blobServiceClient = new BlobServiceClient(
-            `https://assg3cs519am811d.blob.core.windows.net/?sp=racwdli&st=2023-04-15T01:10:11Z&se=2023-04-15T09:10:11Z&sv=2021-12-02&sr=c&sig=%2Bh6xjULQguO62b%2Bp4PpiuxJKPq811GPrgZnHcpFaWF0%3D`
+            `https://assg3cs519am811d.blob.core.windows.net/?sv=2021-12-02&ss=bfqt&srt=sco&sp=rwdlacupiyx&se=2023-05-23T03:20:15Z&st=2023-04-18T19:20:15Z&spr=https&sig=tjRAgnKMaeOtZBxEzxq%2FKahVcE18ZfHyslIbmrXeZvM%3D`
         );
         const containerClient = blobServiceClient.getContainerClient(containerName);
         const blobClient = containerClient.getBlobClient(file.name);
