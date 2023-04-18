@@ -1,8 +1,4 @@
 import {
-  ChakraProvider,
-  theme as ChakraTheme
-} from "@chakra-ui/react"
-import {
   BrowserRouter as Router,
   Switch,
   Route

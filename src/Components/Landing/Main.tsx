@@ -1,14 +1,8 @@
-
-import {
-    Box,
-    Grid,
-    background
-  } from "@chakra-ui/react"
+import {Box, Grid} from "@mui/material";
 import { Fragment } from "react"
 import { BlobServiceClient } from "@azure/storage-blob";
 import { useState } from "react";
 import axios from "axios";
-import Input from '@mui/material/Input';
 import { Button, Typography } from "@mui/material";
 const Main = () => {
     const blobServiceClient = new BlobServiceClient(
@@ -47,7 +41,7 @@ const Main = () => {
 
     return ( 
         <Fragment>
-            <Box textAlign="center" minH={'100vh'} fontSize="xl" style={{display:'flex', justifyContent:'center', alignItems:'center', flexDirection:'column', background:'#000'}}>
+            <Box sx={{display:'flex', justifyContent:'center', alignItems:'center', flexDirection:'column', background:'#000'}}>
                 <Typography component={'h1'} sx={{fontWeight:'400', fontSize:'52px', fontFamily:'sans-serif', color:'#fff'}}>
                     WAREHOUSE MANAGEMENT
                 </Typography>
