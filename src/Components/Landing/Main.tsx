@@ -15,9 +15,7 @@ const Main = () => {
         event.preventDefault();
         uploadImage("warehouse-images", file);
       };
-
-    //   test
-
+      
     async function uploadImage(containerName:string, file:any) {
         const blobServiceClient = new BlobServiceClient(
             `https://assg3cs519am811d.blob.core.windows.net/?sv=2021-12-02&ss=bfqt&srt=sco&sp=rwdlacupiyx&se=2023-05-23T03:20:15Z&st=2023-04-18T19:20:15Z&spr=https&sig=tjRAgnKMaeOtZBxEzxq%2FKahVcE18ZfHyslIbmrXeZvM%3D`
